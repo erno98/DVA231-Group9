@@ -7,17 +7,12 @@ body{
     border: 0px;
     background-color: #F2D1C9;
 }
-/* 
-.img-holder{
-    max-height: 100%;
-    max-width: 100%;
-}
 
-.img-holder:before{
-    content:url(../img/coffee2.jpg);
-    max-width: 100%;
-    max-height: 100%;
-} */
+.fit-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 .grid-container {
   display: grid;
@@ -100,3 +95,7 @@ body{
  grid-row-start: 4;
  grid-row-end: 4;
 } 
+
+#footer{
+    margin-bottom: 5%;
+}
