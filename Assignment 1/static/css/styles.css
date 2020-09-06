@@ -126,6 +126,7 @@ body{
 
 #navbar-lower{
     font-size: 1.5vh;
+    margin-left: 9.5%;
 }
 
 #navbar-lower li a{
@@ -144,7 +145,6 @@ body{
 #navbar-lower li:last-child{
     border-right: none;
 }
-
 
 .grid-searchbar{
     display: flex;
@@ -199,13 +199,14 @@ body{
  grid-column-end: 6;
  grid-row-start: 1;
  grid-row-end: 3;
+ padding-left: 0%;
 }
 
 .grid-lowernavbar {
-    grid-column-start: 2;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 3;
+ grid-column-start: 2;
+ grid-column-end: 6;
+ grid-row-start: 3;
+ grid-row-end: 3;
 }
 
 .grid-searchbar {
