@@ -170,6 +170,10 @@ body{
     transition: 0.3s;
 }
 
+.footer {
+  margin-top: 2%;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
@@ -193,6 +197,27 @@ body{
  grid-row-start: 1;
  grid-row-end: 4;
 }
+
+.grid-logofooter {
+ grid-column-start: 1;
+ grid-column-end: 1;
+ grid-row-start: 2;
+ grid-row-end: 4;
+}
+
+.grid-footerbutton {
+ grid-column-start: 1;
+ grid-column-end: 7;
+ grid-row-start: 1;
+ grid-row-end: 1;
+}
+
+.grid-footernavbar {
+ grid-column-start: 2;
+ grid-column-end: 7;
+ grid-row-start: 2;
+ grid-row-end: 4;
+} 
 
 .grid-uppernavbar {
  grid-column-start: 2;
