@@ -145,7 +145,7 @@ body{
 }
 
 #navbar-upper{
-    float: right;
+    /*float: right;*/
     padding: 0 8px;
     font-size: 2.5vh;
 }
@@ -314,7 +314,7 @@ body{
  grid-column-end: 6;
  grid-row-start: 1;
  grid-row-end: 3;
- padding-left: 0%;
+ padding-left: 20%;
 }
 
 .grid-lowernavbar {
@@ -329,6 +329,7 @@ body{
  grid-column-end: 6;
  grid-row-start: 1;
  grid-row-end: 3;
+ margin-left: -90%;
 }
 
 .grid-container > div {
