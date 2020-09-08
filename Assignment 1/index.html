@@ -3,7 +3,7 @@
 
 	<head>
 		<link rel="stylesheet" href="static/css/styles.css">
-          <script src="static/js/script.js"></script>
+        <script src="static/js/script.js"></script>
           
         <script src="https://kit.fontawesome.com/76e1a337f9.js" crossorigin="anonymous"></script>
 
@@ -13,6 +13,8 @@
        
         <!-- Content section -->
         <div id="content">
+
+            <!-- Grid section -->
             <div class="grid-container">
 
                 <!-- Header section -->
@@ -31,6 +33,14 @@
                                 <li><a href="">Roasting</a></li>
                                 <li><a href="">Gallery</a></li>
                                 <li><a href="">Follow us</a></li>
+
+                                <!-- Searchbar -->
+                                <li class="search-container">
+                                    <input id="input-search" type="text" placeholder="Search">
+                                    <i id="search-icon" class="fas fa-search"></i>
+                                    <i id="share-icon" class="fas fa-share-alt"></i>
+                                </li> 
+                                <!-- End of searchbar -->
                             </ul>
                         </div>
                         <!-- End of upper navbar -->
@@ -50,14 +60,6 @@
                         </div>
                         <!-- End of lower navbar -->
 
-                        <!-- Searchbar -->
-                        <div class="grid-searchbar">
-                            <input id="input-search" type="text" placeholder="Search">
-                            <i id="search-icon" class="fas fa-search"></i>
-                            <i id="share-icon" class="fas fa-share-alt"></i>
-                        </div> 
-                        <!-- End of searchbar -->
-
                     </div>
                  </div>	
                  <!-- End of header -->
@@ -75,8 +77,19 @@
 
                 </div>
 
-                <div class="grid-row3-pic1 cell">
-                    todo: some gibberish
+                <div class="grid-row3-pic1 cell news-cell">
+                    <p class="bottom-border">Coffee news</p>
+                        <ul class="news-content">
+                            <li><a href="">July 28th, 2020: 2020 World Coffee Championships Canceled Due to COVID-19 Travel Restrictions</a></li>
+                            <li><a href="">June 1st, 2020: Announcing All-Stars Online and All-Stars x Barista Guild</a></li>
+                            <li><a href="">April 21st, 2020: Call for Stories for the World Coffee Championships (WCC) Podcast</a></li>
+                            <li><a href="">March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020</a></li>
+                        </ul>
+                    <div class="news-footer">
+                        <p>Coffee schedule</p>
+                        <p>Upcoming events</p>
+                    </div>
+
                 </div>
 
                 <div class="grid-row3-pic2 cell img-holder">
@@ -103,9 +116,9 @@
                     </div>
 
                 </div>
-                <div class="grid-row3-pic4 cell">
 
-                </div>
+                <div class="grid-row3-pic4 cell"></div>
+
                 <div class="grid-row4-pic1 cell img-holder">
                     <img class="fit-img" src="static/img/coffee1.jpg">
                     <div class="img-text">
@@ -117,6 +130,7 @@
                         </div>                  
                     </div>
                 </div>
+                
                 <div class="grid-row4-pic2 cell img-holder">
                     <img class="fit-img" src="static/img/coffee3.jpg">
                     <div class="img-text">
@@ -128,6 +142,7 @@
                         </div>                  
                     </div>
                 </div>
+
                 <div class="grid-row4-pic3 cell img-holder">
                     <img class="fit-img" src="static/img/coffee4.jpg">
                     <div class="img-text">
@@ -139,30 +154,34 @@
                         </div>                  
                     </div>
                 </div>
-        <!-- End of content -->
-
-		<div class="grid-footer">
-		    <div class="grid-navbar">
-                <div class="grid-logofooter">
-                    <img class="logo" src="static/img/logo.png">
+                    
+                <!-- Footer section -->
+                <div class="grid-footer">
+                    <div class="grid-navbar">
+                        <div class="grid-logofooter">
+                            <img class="logo" src="static/img/logo.png">
+                        </div>
+                        
+                        <div class="grid-footerbutton">
+                            <button type="button" class="cell" id="more-stories-button">More Stories</button> 
+                        </div>
+                        
+                        <div class="grid-footernavbar">
+                            <nav class="footer">
+                                    <a href="">Coffee Contacts</a>
+                                    <a href="">Imprint</a>
+                                    <a href="">Privacy</a>
+                                    <a href="">Coffee Chief</a>
+                                    <a href="">Contacts</a>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="grid-footerbutton">
-                    <button type="button" class="cell" id="more-stories-button">More Stories</button> 
-                </div>
-                
-                <div class="grid-footernavbar">
-                    <nav class="footer">
-                            <a href="">Coffee Contacts</a>
-                            <a href="">Imprint</a>
-                            <a href="">Privacy</a>
-                            <a href="">Coffee Chief</a>
-                            <a href="">Contacts</a>
-                    </nav>
-                </div>
+                <!-- End of footer -->
             </div>
+            <!-- End of grid -->
         </div>
-
+        <!-- End of container -->
 	</body>
 </html>
 
