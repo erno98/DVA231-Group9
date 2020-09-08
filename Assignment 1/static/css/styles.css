@@ -145,9 +145,10 @@ body{
 }
 
 #navbar-upper{
-    /*float: right;*/
+    float: right;
     padding: 0 8px;
     font-size: 2.5vh;
+
 }
 
 #navbar-upper li{
@@ -230,27 +231,20 @@ body{
 }
 
 #search-icon{
-    margin-top: 3%;
-    margin-right: 1%;
-    padding-top: 2%;
-    padding-right: 2%;
-    padding-left: 2%;
+
     cursor: pointer;
     color: #221a1b;
     background-color: #F2D1C9;
 }
 
 #share-icon{
-    margin-top: 5%;
-    margin-right: 7%;
-    padding-right: 2%;
+
     cursor: pointer;
     color: #F2D1C9;
 }
 
 .footer {
-  margin-top: 5%;
-  margin-bottom: 5%;
+
   float: right;
 }
 
@@ -333,7 +327,6 @@ body{
  grid-column-end: 6;
  grid-row-start: 1;
  grid-row-end: 3;
- padding-left: 20%;
 }
 
 .grid-lowernavbar {
@@ -348,7 +341,7 @@ body{
  grid-column-end: 6;
  grid-row-start: 1;
  grid-row-end: 3;
- margin-left: -90%;
+ /* margin-left: -90%; */
 }
 
 .grid-container > div {
