@@ -14,26 +14,19 @@ $(document).ready(function() {
       "static/img/coffee2.jpg"
     ];
     
-    var current = 0;
-    var active = $('img-active')
-    
-    $('img-changer').each(index, element) {
+    $('img-changer').each(function(index, element) {
         setInterval(function(){
-            element.show()
-            if(current === index) {
-                
+            if(element.hasClass('img-active')) {
+                element.show()
             }
-        })
-
-    }
-
-    setInterval(function(){
-                
-      $('#img-changer').slideDown(400); //attr('src', images[current])
-      current = (current < images.length - 1)? current + 1: 0;
+            else {
+                $('active-img').removeClass('img-active').hide()
+                element.addClass('img-active')
+                element.show()
+            }
+        }, 2000)
     
-    },3000); /*1000 = 1 sec*/
-
+    })
 });
 
 
