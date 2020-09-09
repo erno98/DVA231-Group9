@@ -6,8 +6,8 @@ body{
 }
 
 .cell{
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-    border: 0px;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    border: 0;
     background-color: #F2D1C9;
 }
 
@@ -49,7 +49,7 @@ body{
 /* Box contatining the header(title) on the image */
 .img-title-box{
     width: fit-content;
-    padding: 12px;
+    padding: 0.8rem;
     background-color: rgba(189, 99, 47, 0.9);
     cursor: pointer;
     transition: 0.3s;
@@ -64,7 +64,7 @@ body{
 
 /* Box containing description of the image (below title) */
 .img-description-box{
-    padding: 12px;
+    padding: 0.8rem;
     background-color: rgba(242, 209, 201, 0.9);
     transition: 0.3s;
     cursor: pointer;
@@ -76,6 +76,20 @@ body{
     background-color: rgba(242, 209, 201, 1);
     transition: 0.3s;
 
+}
+
+.img-description-hidden{
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(242, 209, 201, 1);
+}
+
+.img-description-hidden p{
+    padding: 8px;
 }
 
 /* Div for the text on half of the image with custom shape defined by clip-path */
@@ -122,7 +136,7 @@ body{
     font-size: 0.8rem;
     transition: 0.3s;
     text-align: left;
-    padding: 8px 16px;
+    padding: 0.4rem 1rem;
     display: grid;
 
 }
@@ -151,7 +165,7 @@ body{
 }
 
 .news-content > li{
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
 }
 
 .news-footer{
@@ -216,7 +230,7 @@ body{
 
 /* Upper navbar (NOTE: lowr navbar as well for 'li a')*/
 #navbar-upper{
-    padding: 0 8px;
+    padding: 0 0.5rem;
     font-size: 2.5vh;
 }
 
@@ -231,7 +245,7 @@ body{
 }
 
 #navbar-upper li a, #navbar-lower li a{
-  padding: 8px;
+  padding: 0.5rem;
   color: #F2D1C9;
 }
 
@@ -253,7 +267,7 @@ body{
 
 #navbar-lower li a{
     background-color: #221a1b;
-    padding: 12px;
+    padding: 0.8rem;
 }
 
 #navbar-lower li{
@@ -285,10 +299,10 @@ body{
     background-color: #F2D1C9;
     color: #403233;
     border: none;
-    padding: 12px;
+    padding: 0.8rem;
     transition: 0.3s;
     outline: none;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
 }
 
 #input-search:focus{
@@ -329,7 +343,7 @@ body{
 .footer a{
     color: #F2D1C9;
     text-decoration: none;
-    padding: 16px;
+    padding: 1rem;
     opacity: 0.6;
     transition: 0.3s;
 }
@@ -342,7 +356,7 @@ body{
 /* Wide button for more stories */
 #more-stories-button{
     width: 100%;
-    padding: 8px;
+    padding: 0.5rem;
     background-color: #BD632F;
     color: #F2D1C9;
     border: none;
