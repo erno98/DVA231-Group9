@@ -13,20 +13,39 @@ $(document).ready(function() {
       "static/img/Coffee_content_3.jpg",
       "static/img/coffee2.jpg"
     ];
+
+    var current = 0
+
+  /*  setInterval(function(){
+        $('#slide-img').attr('src', images[current])
+        if(current += 1 > images.length-1) {current = 0}
+        else {current += 1}
+    }, 4000) */
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
     
-    $('img-changer').each(function(index, element) {
-        setInterval(function(){
-            if(element.hasClass('img-active')) {
-                element.show()
-            }
-            else {
-                $('active-img').removeClass('img-active').hide()
-                element.addClass('img-active')
-                element.show()
-            }
-        }, 2000)
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
     
-    })
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("img-slide");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {  
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+
+    setInterval(function(){
+        if(current += 1 > images.length-1) {current = 0}
+        else {current += 1}
+        plusDivs(current)
+    }, 4000)
+
 });
 
 
