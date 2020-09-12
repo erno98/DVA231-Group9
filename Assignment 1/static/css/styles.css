@@ -16,10 +16,8 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    cursor: pointer;
-    transition: 0.3s;
-
 }
+
 
 .fit-img:hover{
     opacity: 0.9;
@@ -42,6 +40,7 @@ body{
 
 /* Text to display as header (title) on the image */
 .img-text-header{
+    z-index: 101;
     bottom: 10%;
     left: 2%;
 }
@@ -78,6 +77,7 @@ body{
 
 }
 
+/* Longer, hidden description showing on hover */
 .img-description-hidden{
     position: absolute;
     text-align: left;
@@ -97,6 +97,7 @@ body{
     text-align: justify;
 }
 
+/* Button in the description */
 .read-more-btn{
     float: right;
     margin-right: 5%;
@@ -108,7 +109,6 @@ body{
     font-size: 1.2rem;
     padding: 0.5rem;
     box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
-
 }
 
 .read-more-btn:hover{
@@ -117,6 +117,21 @@ body{
     background-color: rgb(218, 114, 54);
     transition: 0.3s;
 
+}
+
+/* Video styling */
+.video-wrapper{
+    position: relative; 
+    padding-bottom: 56.25%; /* 16:9 */  
+    padding-top: 25px;
+}
+
+.video-wrapper iframe{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
 }
 
 /* Div for the text on half of the image with custom shape defined by clip-path */
@@ -222,7 +237,7 @@ body{
     top: 0;
     width: 100%;
     display: block;
-    z-index: 100;
+    z-index: 102;
     background-color: #403233;
 }
 
