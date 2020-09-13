@@ -8,7 +8,7 @@ $(document).ready(function() {
         $(this).slideUp(400);
     })
 
-    var images = [
+   /* var images = [
       "static/img/Coffee_content_2.jpg",
       "static/img/Coffee_content_3.jpg",
       "static/img/coffee2.jpg"
@@ -16,11 +16,11 @@ $(document).ready(function() {
 
     var current = 0
 
-  /*  setInterval(function(){
+    setInterval(function(){
         $('#slide-img').attr('src', images[current])
         if(current += 1 > images.length-1) {current = 0}
         else {current += 1}
-    }, 4000) */
+    }, 4000) 
 
     var slideIndex = 1;
     showDivs(slideIndex);
@@ -45,7 +45,7 @@ $(document).ready(function() {
         else {current += 1}
         plusDivs(current)
     }, 4000)
-
+    */
 });
 
 
