@@ -80,7 +80,7 @@
                     <div class="img-text img-text-header">
                         <div class="img-title-box">
                             From fruit to espresso
-                        </div>
+                        </div>s
                         <div class="img-description-box">
                             Our journalist finds the way through a Ethiopian plantation
                         </div>                  
