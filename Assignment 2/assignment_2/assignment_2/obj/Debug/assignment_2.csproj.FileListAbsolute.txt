@@ -1,0 +1,6 @@
+/Users/ernest_pokropek/Desktop/Work/DVA/DVA231-Group9/Assignment 2/assignment_2/assignment_2/bin/assignment_2.dll
+/Users/ernest_pokropek/Desktop/Work/DVA/DVA231-Group9/Assignment 2/assignment_2/assignment_2/bin/assignment_2.pdb
+/Users/ernest_pokropek/Desktop/Work/DVA/DVA231-Group9/Assignment 2/assignment_2/assignment_2/obj/Debug/assignment_2.csprojAssemblyReference.cache
+/Users/ernest_pokropek/Desktop/Work/DVA/DVA231-Group9/Assignment 2/assignment_2/assignment_2/obj/Debug/assignment_2.csproj.CoreCompileInputs.cache
+/Users/ernest_pokropek/Desktop/Work/DVA/DVA231-Group9/Assignment 2/assignment_2/assignment_2/obj/Debug/assignment_2.dll
+/Users/ernest_pokropek/Desktop/Work/DVA/DVA231-Group9/Assignment 2/assignment_2/assignment_2/obj/Debug/assignment_2.pdb
