@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.assignment__2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="assignment_2/Default.aspx">
     <Files>
-      <File FileName="assignment_2/Default.aspx.cs" Line="1" Column="1" />
-      <File FileName="assignment_2/Default.aspx" Line="8" Column="28" />
+      <File FileName="assignment_2/Default.aspx.cs" Line="16" Column="1" />
+      <File FileName="assignment_2/Default.aspx" Line="4" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,9 +15,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

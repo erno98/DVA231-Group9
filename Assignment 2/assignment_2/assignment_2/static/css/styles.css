@@ -1,0 +1,542 @@
+/* Major definitons */
+body{
+    background-color: #403233;
+    margin: 1% 1%;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.cell{
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    border: 0;
+    background-color: #F2D1C9;
+}
+
+/* Images styling */
+.fit-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.fit-img:hover{
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+/* Div that holds the image */
+.img-holder{
+    position: relative;
+    text-align: center;
+}
+
+/* Text to display as description on the image */
+.img-text{
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    left: 0;
+}
+
+/* Text to display as header (title) on the image */
+.img-text-header{
+    z-index: 101;
+    bottom: 10%;
+    left: 2%;
+}
+
+/* Box contatining the header(title) on the image */
+.img-title-box{
+    width: fit-content;
+    padding: 0.8rem;
+    background-color: rgba(189, 99, 47, 0.9);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.img-title-box:hover{
+    background-color: rgba(189, 99, 47, 1);
+    transition: 0.3s;
+
+}
+
+/* Box containing description of the image (below title) */
+.img-description-box{
+    padding: 0.8rem;
+    background-color: rgba(242, 209, 201, 0.9);
+    transition: 0.3s;
+    cursor: pointer;
+
+
+}
+
+.img-description-box:hover{
+    background-color: rgba(242, 209, 201, 1);
+    transition: 0.3s;
+
+}
+
+/* Longer, hidden description showing on hover */
+.img-description-hidden{
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(242, 209, 201, 1);
+}
+
+.img-description-hidden p{
+    padding: 0 0.5rem;
+}
+
+.extended-description{
+    padding: 1rem;
+    text-align: justify;
+}
+
+/* Button in the description */
+.read-more-btn{
+    float: right;
+    margin-right: 5%;
+
+    background-color: rgb(189, 99, 47);
+    color: rgba(242, 209, 201, 1);
+    transition: 0.3s;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.read-more-btn:hover{
+
+    cursor: pointer;
+    background-color: rgb(218, 114, 54);
+    transition: 0.3s;
+
+}
+
+/* Video styling */
+.video-wrapper iframe{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+
+/* Div for the text on half of the image with custom shape defined by clip-path */
+.img-text-fill-right{
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(189, 99, 47, .9);
+    height: 100%;
+    width: 50%;
+    clip-path: polygon(10% 35%, 10% 0, 100% 0, 100% 100%, 10% 100%, 10% 65%, 0 50%);
+    padding-left: 10%;
+    padding-right: 2%;
+    transition: 0.3s;
+    cursor: pointer;
+
+
+}
+
+.img-text-fill-right:hover{
+    background-color: rgba(189, 99, 47, 1);
+    transition: 0.3s;
+}
+
+.img-text-fill-right h2, .emph{
+    color: rgb(242, 209, 201);
+}
+
+/* Logo object */
+.logo{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cell containing news (text) */
+.news-cell{
+    background-color: rgba(189, 99, 47, 1);
+    color: rgb(242, 209, 201);
+    font-size: 0.8rem;
+    transition: 0.3s;
+    text-align: left;
+    padding: 0.4rem 1rem;
+    display: grid;
+
+}
+
+.news-cell:hover{
+    background-color: rgba(189, 99, 47, 0.8);
+    transition: 0.3s;
+}
+
+.news-cell a{
+    color: rgb(242, 209, 201);
+    text-decoration: none;
+}
+
+.news-cell a:hover{
+    text-decoration: underline;
+}
+
+.news-content{
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.news-content > li{
+    padding-bottom: 0.5rem;
+}
+
+.news-footer{
+    align-self: end;
+    border-top: 1px solid rgb(242, 209, 201);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.news-footer p{
+    display: inline-block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0;
+}
+
+.bottom-border{
+    border-bottom: 1px solid rgb(242, 209, 201);
+    height: fit-content;
+    margin-bottom: 0;
+
+}
+
+/* Sticky header */
+.grid-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 102;
+    background-color: #403233;
+}
+
+/* Background image for header */
+.grid-header::after{
+    content: "";
+    background: url('../img/background.png');
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+/* Basic navbar styling */
+.navbar{
+    list-style-type: none;
+}
+
+.navbar li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#navbar-lower li a{
+    float: left;
+}
+
+/* Upper navbar (NOTE: lowr navbar as well for 'li a')*/
+#navbar-upper{
+    padding: 0 0.5rem;
+    font-size: 2.5vh;
+}
+
+#navbar-upper li{
+    float: left;
+    border-right: 1px solid rgba(242, 209, 201, 0.5);
+}
+
+/* li:nth-last-child(2) because of search box being element of list */
+#navbar-upper li:last-child, #navbar-upper li:nth-last-child(2){
+    border-right: none;
+}
+
+#navbar-upper li a, #navbar-lower li a{
+  padding: 0.5rem;
+  color: #F2D1C9;
+}
+
+#navbar-upper li a:visited{
+    color: #F2D1C9;
+}
+
+#navbar-upper li a:hover{
+    background-color: #F2D1C9;
+    color: #403233;
+    transition: 0.3s;
+}
+
+/* Lower navbar */
+#navbar-lower{
+    font-size: 1.5vh;
+    margin-left: 8%;
+}
+
+#navbar-lower li a{
+    background-color: #221a1b;
+    padding: 0.8rem;
+}
+
+#navbar-lower li{
+    float: left;
+    border-right: 1px solid transparent;
+    /* Note the slight workaround -  the border is a gradient with steep transition */
+    /* so it appears like not spanning across whole height */
+    border-image: linear-gradient(to top, #221a1b 20%, 
+                                          rgba(242, 209, 201, 0.3) 20%, 
+                                          rgba(242, 209, 201, 0.3) 80%, 
+                                          #221a1b 80%);
+    border-image-slice: 1;
+}
+
+#navbar-lower li a:hover{
+    float: left;
+    background-color: rgba(242, 209, 201, 0.5);
+
+    transition: 0.3s;
+}
+
+#navbar-lower li:last-child{
+    border-right: none;
+}
+
+/* Searchbox input field */
+#input-search{
+    font-size: 2vh;
+    background-color: #F2D1C9;
+    color: #403233;
+    border: none;
+    padding: 0.8rem;
+    transition: 0.3s;
+    outline: none;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+#input-search:focus{
+    background-color: rgba(242, 209, 201, 0.3);
+    color: #F2D1C9;
+    transition: 0.3s;
+}
+
+/* Wrapper */
+.search-container{
+    margin-left: 5%;
+}
+
+/* Icon of search, inside the input */
+#search-icon{
+    cursor: pointer;
+    color: #221a1b;
+    position: relative;
+    top: 0;
+    right: 15%;
+}
+
+/* Icon for share, outside of the input */
+#share-icon{
+    cursor: pointer;
+    color: #F2D1C9;
+    position: relative;
+    top: 0;
+    right: 5%;
+}
+
+/* Footer */
+.footer {
+    margin-top: 3%;
+    float: right;
+}
+
+.footer a{
+    color: #F2D1C9;
+    text-decoration: none;
+    padding: 1rem;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.footer a:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+/* Wide button for more stories */
+#more-stories-button{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #BD632F;
+    color: #F2D1C9;
+    border: none;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+#more-stories-button:hover{
+    background-color: #9b5126;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* ---------------- GRID SECTION ---------------- */
+
+/* Main container */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows:  15vh 35vh 35vh 20vh 10vh;
+  grid-gap: 2%;
+  height: 100%;
+  width: 100%;
+}
+
+/* Navbar */
+.grid-navbar {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows:  auto auto auto;
+  height: 100%;
+  width: 100%;
+
+}
+
+/* Upper-left logo */
+.grid-logo {
+ grid-column-start: 1;
+ grid-column-end: 1;
+ grid-row-start: 1;
+ grid-row-end: 4;
+}
+
+/* Footer row */
+.grid-logofooter {
+ grid-column-start: 1;
+ grid-column-end: 1;
+ grid-row-start: 2;
+ grid-row-end: 4;
+}
+
+/* Button for more stories */
+.grid-footerbutton {
+ grid-column-start: 1;
+ grid-column-end: 7;
+ grid-row-start: 1;
+ grid-row-end: 1;
+}
+
+/* Navbar at the footer */
+.grid-footernavbar {
+ grid-column-start: 2;
+ grid-column-end: 7;
+ grid-row-start: 2;
+ grid-row-end: 4;
+} 
+
+/* Upper navbar for header */
+.grid-uppernavbar {
+ grid-column-start: 4;
+ grid-column-end: 6;
+ grid-row-start: 1;
+ grid-row-end: 3;
+}
+
+/* Lower navbar for header */
+.grid-lowernavbar {
+ grid-column-start: 2;
+ grid-column-end: 6;
+ grid-row-start: 3;
+ grid-row-end: 3;
+}
+
+/* Header */
+.grid-header {
+ grid-column-start: 2;
+ grid-column-end: 6;
+ grid-row-start: 1;
+ grid-row-end: 1;
+}
+
+/* ---------------- PICTURES ---------------- */
+.grid-first-pic {
+ grid-column-start: 2;
+ grid-column-end: 6;
+ grid-row-start: 2;
+ grid-row-end: 2;
+}
+
+.grid-row3-pic1 {
+ grid-column-start: 2;
+ grid-column-end: 2;
+ grid-row-start: 3;
+ grid-row-end: 3;
+}
+
+.grid-row3-pic2 {
+ grid-column-start: 3;
+ grid-column-end: 3;
+ grid-row-start: 3;
+ grid-row-end: 3;
+}
+
+.grid-row3-pic3 {
+ grid-column-start: 4;
+ grid-column-end: 6;
+ grid-row-start: 3;
+ grid-row-end: 3;
+}
+
+.grid-row4-pic1 {
+ grid-column-start: 2;
+ grid-column-end: 2;
+ grid-row-start: 4;
+ grid-row-end: 6;
+}
+
+.grid-row4-pic2 {
+ grid-column-start: 3;
+ grid-column-end: 5;
+ grid-row-start: 4;
+ grid-row-end: 6;
+}
+
+.grid-row4-pic3 {
+ grid-column-start: 5;
+ grid-column-end: 5;
+ grid-row-start: 4;
+ grid-row-end: 6;
+} 
+
+.grid-footer{
+ grid-column-start: 2;
+ grid-column-end: 6;
+ grid-row-start: 7;
+ grid-row-end: 7;
+}
