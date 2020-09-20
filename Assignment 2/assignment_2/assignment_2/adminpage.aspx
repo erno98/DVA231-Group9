@@ -24,12 +24,18 @@
             <asp:Panel ID="Login_true" runat="server" Visible="false">
                 <asp:Label runat="server" Text="Login Sucessful!" Visible="true"></asp:Label>
                 <br />
-               <!-- File-Location: <asp:TextBox runat="server" ID="filename" Text="Please enter a File-Location"></asp:TextBox> -->
                 File-Location: <asp:FileUpload id="FileUploadControl" runat="server" />
-                <asp:RequiredFieldValidator runat="server" Controltovalidate="filename" ErrorMessage="Please enter a File-Location"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" Controltovalidate="FileUploadControl" ErrorMessage="Please enter a File-Location"></asp:RequiredFieldValidator> 
                 <br />
                 <asp:Button runat="server" Text="Upload File" OnClick="Upload_Click" />
+                <asp:Label runat="server" ID="ValidFile" Text=""></asp:Label>
+                <br />
+                <br />
+                <asp:Button runat="server" Text="Logout" OnClick="Logout_Click" CausesValidation="false"/>
             </asp:Panel>
+            <br />
+            <br />
+            <asp:Button ID="CoffeeButton" runat="server" Text="To Coffee-Page" OnClick="To_Coffeepage" CausesValidation="false" />
         </div>
     </form>
 </body>
