@@ -35,7 +35,6 @@ namespace assignment_2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             if ((string)Session["Login"] == "true")
             {
                 Login_panel.Visible = false;
@@ -91,7 +90,7 @@ namespace assignment_2
             }
             else
             {
-                ValidFile.Text = "Unvalid File!, please Upload JSON-File";
+                ValidFile.Text = "Invalid file format - please upload a JSON-File.";
             }
         }
 

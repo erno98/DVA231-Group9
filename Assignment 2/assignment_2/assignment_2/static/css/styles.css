@@ -372,7 +372,7 @@ body{
 
 /* Footer */
 .footer {
-    margin-top: 3%;
+    margin: 3% 0;
     float: right;
 }
 
@@ -382,6 +382,29 @@ body{
     padding: 1rem;
     opacity: 0.6;
     transition: 0.3s;
+}
+
+.footer form{
+    display: inline-block;
+}
+
+
+#AdminButton{
+    font-size: 2vh;
+    background-color: #F2D1C9;
+    color: #403233;
+    border: none;
+    padding: 0.8rem;
+    transition: 0.3s;
+    outline: none;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+#AdminButton:hover{
+    background-color: #BD632F;
+    color: #F2D1C9;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .footer a:hover{

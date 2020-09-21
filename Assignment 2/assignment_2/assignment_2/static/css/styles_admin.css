@@ -1,0 +1,199 @@
+#login-form-wrapper{
+    background-color: #F2D1C9;
+    margin: 0% auto;
+    margin-top: 10%;
+    width: 35%;
+    text-align: center;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    padding: 4em 1.5em;
+    font-size: 1.5rem;
+
+}
+
+#login-wrapper > input{
+    font-size: 1.5rem;
+}
+
+.input-wrapper{
+    margin-top: 2%;
+}
+
+.input-wrapper > *{
+    display: block;
+}
+
+.input-wrapper > p{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    color: #403233;
+    padding-bottom: 0.2em;
+}
+
+.input-wrapper > input{
+    height: 2.5em;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.input-wrapper > span, #ValidFile{
+    color: white !important;
+    background-color: black;
+    opacity: 0.7;
+    clip-path: polygon(3% 0%, 3% 0, 100% 0, 100% 100%, 3% 100%, 3% 100%, 0% 50%);
+    width: fit-content;
+    padding: 0.2em 5%;
+    position: absolute;
+
+}
+
+input[type=text], input[type=password]{
+    font-size: 2vh;
+    background-color: white;
+    border: none;
+    transition: 0.3s;
+    outline: none;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    background-color: rgb(207, 207, 207);
+    transition: 0.3s;
+}
+
+#ctl05{
+    right: 5.5%;
+    top: 34.5%;
+}
+
+#ctl06{
+    top: 45%;
+    right: 6%;
+}
+
+#ctl07{
+    color: white !important;
+    background-color: black;
+    opacity: 0.7;
+    clip-path: polygon(3% 0%, 3% 0, 100% 0, 100% 100%, 3% 100%, 3% 100%, 0% 50%);
+    width: fit-content;
+    padding: 0.2em 5%;
+    position: absolute;
+    right: 5.5%;
+    top: 30%;
+}
+
+#FileUploadControl{
+    height: 2em;
+    font-size: 1em; 
+    width: 100%;
+}
+
+#upload_btn{
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    background-color: #BD632F;
+    color: #F2D1C9;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#upload_btn:hover{
+    background-color: #99D17B;
+    color: #403233;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#ValidFile{
+    position: absolute;
+    top: 28.5%;
+    right: 1%;
+}
+
+#Login_false, #Login_success{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    background-color: #F2D1C9;
+    margin: 1em;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}  
+
+#logout_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: .8em;
+    outline: none;
+    border: none;
+    padding: 1em 1em  4em 4em;
+    opacity: 0.4;
+    background-color: #F2D1C9;
+    transition: 0.3s;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+    /* clip-path: polygon(0 0, 100% 100%, 100% 0); */
+
+}
+
+#logout_btn:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+#Login_true > *{
+    display: block;
+}
+
+#submit_logo_btn{
+    margin-top: 1em;
+    width: 80%;
+    height: 2em;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    background-color: #BD632F;
+    color: #F2D1C9;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+
+#submit_logo_btn:hover{
+    background-color: #99D17B;
+    color: #403233;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#submit_logo_btn:focus{
+    outline: none;
+}
+
+.logo-wrapper{
+    object-fit: contain;
+    width: 20%;
+    margin: 1em auto;
+}
+
+
+#CoffeeButton{
+    position: relative;
+    bottom: 0;
+    outline: none;
+    border: none;
+    background-color: #F2D1C9;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+#CoffeeButton:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.3s;
+}

@@ -1,12 +1,6 @@
 ﻿<%@ Page Language="C#" Inherits="assignment_2.Coffee" CodeBehind="Coffee.aspx.cs"%>
 <!DOCTYPE html>
-<script runat="server">
 
-    protected void AdminButton_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~/adminpage.aspx", true);
-    }
-</script>
 
 
 <html runat="server">
@@ -23,10 +17,18 @@
 
         <link rel="stylesheet" href="static/css/styles.css">
         <script src="static/js/script.js"></script>
+        
+        <script runat="server">
+            protected void AdminButton_Click(object sender, EventArgs e)
+            {
+                Response.Redirect("~/adminpage.aspx", true);
+            }
+        </script>
 
         </head>
     
     <body runat="server">
+        
         <!-- Content section -->
         <div id="content" runat="server">
 
@@ -88,7 +90,7 @@
                     <div class="img-text img-text-header">
                         <div class="img-title-box">
                             From fruit to espresso
-                        </div>s
+                        </div>
                         <div class="img-description-box">
                             Our journalist finds the way through a Ethiopian plantation
                         </div>                  
@@ -193,18 +195,15 @@
                         </div>
                         
                         <div class="grid-footernavbar" runat="server" >
-
-                            
-                            
                             <nav class="footer" runat="server">
-                                    <form runat="server">
-                                        <asp:Button ID="AdminButton" runat="server" Text="To admin-Page" OnClick="AdminButton_Click" />
-                                    </form> 
                                     <a href="">Coffee Contacts</a>
                                     <a href="">Imprint</a>
                                     <a href="">Privacy</a>
                                     <a href="">Coffee Chief</a>
                                     <a href="">Contacts</a>
+                                    <form runat="server">
+                                        <asp:Button ID="AdminButton" runat="server" Text="Login as admin" OnClick="AdminButton_Click" />
+                                    </form>
                             </nav>
                         </div>
                     </div>
