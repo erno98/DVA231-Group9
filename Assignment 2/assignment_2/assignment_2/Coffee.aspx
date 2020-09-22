@@ -105,6 +105,7 @@
                             <li><a href="">June 1st, 2020: Announcing All-Stars Online and All-Stars x Barista Guild</a></li>
                             <li><a href="">April 21st, 2020: Call for Stories for the World Coffee Championships (WCC) Podcast</a></li>
                            <!-- <li><a href="">March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020</a></li> -->
+                            <!-- asp Literal as variable content -->
                             <li><asp:Literal Text="" runat="server" ID="variable_content1"></asp:Literal></li>
                         </ul>
                     <div class="news-footer">

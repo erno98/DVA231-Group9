@@ -9,12 +9,14 @@ namespace assignment_2
 {
     public partial class Coffee : System.Web.UI.Page
     {
+        //initial-content for the case that no .json-file was uploaded
         public element_content[] pagecontent = new element_content[]
-                {
-                    new element_content("","","March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020"),
-                    new element_content("","","Learn about how to steam milk for latte art! French press is a perfect tool for frothing milk. First, you need to heat up the milk and then pour it into the french press. Finally, vigorously start to move the press' knob up and down, until the foam is formed..."),
-                    new element_content("","static/img/beans2.jpg","")
-                };
+        {
+               new element_content("","","March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020"),
+               new element_content("","","Learn about how to steam milk for latte art! French press is a perfect tool for frothing milk. First, you need to heat up the milk and then pour it into the french press. Finally, vigorously start to move the press' knob up and down, until the foam is formed..."),
+               new element_content("","static/img/beans2.jpg","")
+        };
+        //if there is content uploaded by a .json-file use it for the content, else use initial data
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["content"] == null)

@@ -35,7 +35,9 @@
                 </asp:Panel>
 
                 <asp:Panel ID="Login_true" runat="server" Visible="false">
-                    <asp:Label runat="server" Text="Login Sucessful!" Visible="true" id="Login_success"></asp:Label>
+                    <asp:Panel ID="First_login" runat="server" Visible="true">
+                        <asp:Label runat="server" Text="Login Sucessful!" Visible="true" id="Login_success"></asp:Label>
+                    </asp:Panel>
 
                     <div id="upload_wrapper">
                         <asp:FileUpload id="FileUploadControl" runat="server" />
