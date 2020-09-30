@@ -22,31 +22,76 @@ namespace assignment_2 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl content;
         
         /// <summary>
-        /// variable_content1 control.
+        /// title1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal variable_content1;
+        protected global::System.Web.UI.WebControls.Literal title1;
         
         /// <summary>
-        /// variable_content2 control.
+        /// content1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal variable_content2;
+        protected global::System.Web.UI.WebControls.Literal content1;
         
         /// <summary>
-        /// variable_content3 control.
+        /// image2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image variable_content3;
+        protected global::System.Web.UI.WebControls.Image image2;
+        
+        /// <summary>
+        /// title2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal title2;
+        
+        /// <summary>
+        /// content2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal content2;
+        
+        /// <summary>
+        /// image3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image3;
+        
+        /// <summary>
+        /// title3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal title3;
+        
+        /// <summary>
+        /// content3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal content3;
         
         /// <summary>
         /// AdminButton control.

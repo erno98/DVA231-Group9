@@ -31,9 +31,9 @@ namespace assignment_2
         public element_content[] content = new element_content[]
                 {   
                     // Constructor(title, imageurl, content)
-                    new element_content("","","March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020"),
-                    new element_content("","","Learn about how to steam milk for latte art! French press is a perfect tool for frothing milk. First, you need to heat up the milk and then pour it into the french press. Finally, vigorously start to move the press' knob up and down, until the foam is formed..."),
-                    new element_content("","static/img/beans2.jpg","")
+                    new element_content("","",""),
+                    new element_content("","",""),
+                    new element_content("","","")
                 };
 
         protected void Page_Load(object sender, EventArgs e)
@@ -59,13 +59,32 @@ namespace assignment_2
         //Method which is called after try to Login
         protected void Login_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\lukas\OneDrive\Desktop\Assignment2\DVA231 - Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf;Integrated Security=True";
+            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
+
+            string query = "Select password FROM users WHERE username=" + "'" + username.Text + "'";
+
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
 
-            
+            SqlCommand command = new SqlCommand(query, conn);
 
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read() == false)
+            {
+                Login_false.Visible = true;
+            }
+            else
+            {
+                string result = reader.GetValue(0).ToString();
+                Session["login"] = "true";
+                Session["first_login"] = "true";
+                Login_panel.Visible = false;
+                Login_true.Visible = true;
+            }
+   
+            conn.Close();
             /*
 
             //if username and password are correct, change Session-Login variable and show the Upload-Panel and hide the Login-Panel
@@ -108,8 +127,26 @@ namespace assignment_2
                     content[i].content = json_news.SelectToken("news[" + i + "].content").ToString(); 
                 }
 
-                //assign the data-structure to the Session-Array
-                Session["content"] = content;
+                string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
+
+                string query1 = "UPDATE news SET title = " + "'" + content[0].title + "', " + " img = " + "'" + content[0].imgurl + "'," + " content = " + "'" + content[0].content + "'" + " WHERE id= 1";
+                string query2 = "UPDATE news SET title = " + "'" + content[1].title + "', " + " img = " + "'" + content[1].imgurl + "'," + " content = " + "'" + content[1].content + "'" + " WHERE id= 2";
+                string query3 = "UPDATE news SET title = " + "'" + content[2].title + "', " + " img = " + "'" + content[2].imgurl + "'," + " content = " + "'" + content[2].content + "'" + " WHERE id= 3";
+
+
+                SqlConnection conn = new SqlConnection(connectionString);
+
+                conn.Open();
+
+                SqlCommand command1 = new SqlCommand(query1, conn);
+                SqlCommand command2 = new SqlCommand(query2, conn);
+                SqlCommand command3 = new SqlCommand(query3, conn);
+
+                command1.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
+                command3.ExecuteNonQuery();
+
+                conn.Close();
 
                 //tell the admin that the uplaod was successful
                 ValidFile.Text = "Upload was successful!";

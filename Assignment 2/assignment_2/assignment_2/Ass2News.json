@@ -1,19 +1,19 @@
 {
     "news":[
         {
-            "title":"SpaceX's Next Starship Prototype Taking Shape ", 
+            "title":"Coffee news", 
             "imgurl":"#### USE YOU OWN IMAGE URL ###",
-            "content":"Construction of the test craft is proceeding apace, as two new photos posted on Twitter today (Sept. 17) by company founder and CEO Elon Musk reveal."
+            "content":"March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020"
         },
         {
-            "title":"NASA's Juno Mission Cheks Out Eclipse on Jupiter", 
-            "imgurl":"#### USE YOU OWN IMAGE URL ###",
-            "content":"All is well on our largest neighbor; NASA's Juno spacecraft just managed to spot the shadow of Jupiter's moon, Io, passing over its marbled clouds."
+            "title":"Learn about latte art", 
+            "imgurl":"static/img/latte_art.jpg",
+            "content":"Learn about how to steam milk for latte art! French press is a perfect tool for frothing milk. First, you need to heat up the milk and then pour it into the french press. Finally, vigorously start to move the press´ knob up and down, until the foam is formed..."
         },
         {
-            "title":"Europe Wants Ideas for Cave-Spelumking Moon Robots", 
-            "imgurl":"static/img/nasa_content.jpg",
-            "content":"As NASA makes a big push to land humans on the moon's surface by 2024, the European Space Agency (ESA) wants to learn more about the lunar caves that lie beneath."
+            "title":"A coffee bean is a seed of the Coffea plant and the source for coffee.", 
+            "imgurl":"static/img/beans2.jpg",
+            "content":"The two most economically important varieties of coffee plant are the Arabica and the Robusta Arabica beans consist of 0.8–1.4% caffeine and Robusta beans consist of 1.7–4% caffeine"
         }
         ]
 }
