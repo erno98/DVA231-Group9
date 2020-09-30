@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace assignment_2
 {
@@ -12,26 +13,48 @@ namespace assignment_2
         //initial-content for the case that no .json-file was uploaded
         public element_content[] pagecontent = new element_content[]
         {
-               new element_content("","","March 13th, 2020: World of Coffee & Warsaw World Coffee Championships Postponed to October 15-17, 2020"),
-               new element_content("","","Learn about how to steam milk for latte art! French press is a perfect tool for frothing milk. First, you need to heat up the milk and then pour it into the french press. Finally, vigorously start to move the press' knob up and down, until the foam is formed..."),
-               new element_content("","static/img/beans2.jpg","")
+               new element_content("","",""),
+               new element_content("","",""),
+               new element_content("","","")
         };
         //if there is content uploaded by a .json-file use it for the content, else use initial data
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["content"] == null)
+            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
+
+            string query = "Select * FROM news";
+
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            conn.Open();
+
+            SqlCommand command = new SqlCommand(query, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            int counter = 0;
+
+            while(reader.Read())
             {
-                variable_content1.Text = pagecontent[0].content;
-                variable_content2.Text = pagecontent[1].content;
-                variable_content3.ImageUrl = pagecontent[2].imgurl;
+                pagecontent[counter].title = reader.GetValue(0).ToString();
+                pagecontent[counter].imgurl = reader.GetValue(1).ToString();
+                pagecontent[counter].content = reader.GetValue(2).ToString();
+                counter++;
             }
-            else
-            {
-                pagecontent = Session["content"] as element_content[];
-                variable_content1.Text = pagecontent[0].content;
-                variable_content2.Text = pagecontent[1].content;
-                variable_content3.ImageUrl = pagecontent[2].imgurl;
-            }  
+
+            conn.Close();
+
+            title1.Text = "<p class='bottom-border'>" + pagecontent[0].title + "</p>";
+            content1.Text = "<li><a>" + pagecontent[0].content + "</a></li>";
+
+            title2.Text = "<div class='img-title-box'>" + pagecontent[1].title + "</div>";
+            image2.ImageUrl = pagecontent[1].imgurl;
+            content2.Text = "<p class='extended - description'>" + pagecontent[1].content + "</p>";
+
+            title3.Text = "<h2>" + pagecontent[2].title + "</h2>";
+            image3.ImageUrl = pagecontent[2].imgurl;
+            content3.Text = "<p>" + pagecontent[2].content + "</p>";
+
         }
 
 
