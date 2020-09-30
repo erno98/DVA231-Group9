@@ -31,8 +31,7 @@ namespace assignment_2
                 variable_content1.Text = pagecontent[0].content;
                 variable_content2.Text = pagecontent[1].content;
                 variable_content3.ImageUrl = pagecontent[2].imgurl;
-            }
-            
+            }  
         }
     }
 }
