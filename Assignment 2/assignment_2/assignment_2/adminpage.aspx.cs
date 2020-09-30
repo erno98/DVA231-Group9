@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Data.SqlClient;
 using Newtonsoft.Json.Linq;
 
 namespace assignment_2
@@ -58,6 +59,15 @@ namespace assignment_2
         //Method which is called after try to Login
         protected void Login_Click(object sender, EventArgs e)
         {
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\lukas\OneDrive\Desktop\Assignment2\DVA231 - Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            conn.Open();
+
+            
+
+            /*
+
             //if username and password are correct, change Session-Login variable and show the Upload-Panel and hide the Login-Panel
             if (username.Text == "admin" && password.Text == "admin")
             {
@@ -71,6 +81,7 @@ namespace assignment_2
             {
                 Login_false.Visible = true;
             }
+            */
         }
 
         //Method which is called after click the upload-button
