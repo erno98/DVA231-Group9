@@ -54,7 +54,7 @@
 
                                 <!-- Searchbar -->
                                 <li class="search-container">
-                                    <input id="input-search" type="text" placeholder="Search">
+                                    <input id="input-search" type="search" placeholder="Search">
                                     <i id="search-icon" class="fas fa-search"></i>
                                     <i id="share-icon" class="fas fa-share-alt"></i>
                                 </li> 
@@ -62,6 +62,12 @@
                             </ul>
                         </div>
                         <!-- End of upper navbar -->
+
+                        <div id="search-results-wrapper" style="display: none;">
+                            <ul id="search-results">
+                                <p>No results found</p>
+                            </ul>
+                        </div>
 
                         <!-- Lower navbar section -->
                         <div class="grid-lowernavbar">

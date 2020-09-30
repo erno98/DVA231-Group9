@@ -33,5 +33,21 @@ namespace assignment_2
                 variable_content3.ImageUrl = pagecontent[2].imgurl;
             }  
         }
+
+
+        [System.Web.Services.WebMethod]
+        public static List<string> GetData(string query)
+        // function to get top 5 results from a input query
+        {
+            // query is the string that we want to search
+
+            // returns the list of (maximum) 5 content values that matched the query
+
+            List<string> l = new List<string> { "test sample", "sample test", "a test again" };
+
+            return l;
+        }
+        
+
     }
 }
