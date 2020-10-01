@@ -57,7 +57,6 @@ namespace assignment_2
 
         }
 
-
         [System.Web.Services.WebMethod]
         public static List<string> GetData(string query)
         // function to get top 5 results from a input query
