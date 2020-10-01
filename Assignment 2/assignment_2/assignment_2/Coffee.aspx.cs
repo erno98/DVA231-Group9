@@ -58,17 +58,32 @@ namespace assignment_2
         }
 
         [System.Web.Services.WebMethod]
-        public static Dictionary<string, string> GetData(string query)
+        public static Dictionary<int, string> GetData(string query)
         // function to get top 5 results from a input query
         {
-            // query is the string that we want to search
+            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
 
-            // returns the list of (maximum) 5 content values that matched the query
+            string search_query = "SELECT id,title FROM news WHERE title LIKE " + "'%" + query + "%'";
 
-            var d = new Dictionary<int, string>();
-            d.Add(1, "sample test");
-            d.Add(2, "yet again a test");
-            d.Add(3, "test once again");
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            conn.Open();
+
+            SqlCommand command = new SqlCommand(search_query, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            var d = new Dictionary<int, string>
+            {
+                { 1, "" }, { 2, ""}, {3, ""}, { 4, ""}, {5, ""}
+            };
+
+            while(reader.Read())
+            {
+                d[(int)reader.GetValue(0)] = reader.GetValue(1).ToString();
+            }
+
+            conn.Close();
 
             return d;
         }
