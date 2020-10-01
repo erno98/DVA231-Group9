@@ -58,16 +58,19 @@ namespace assignment_2
         }
 
         [System.Web.Services.WebMethod]
-        public static List<string> GetData(string query)
+        public static Dictionary<string, string> GetData(string query)
         // function to get top 5 results from a input query
         {
             // query is the string that we want to search
 
             // returns the list of (maximum) 5 content values that matched the query
 
-            List<string> l = new List<string> { "test sample", "sample test", "a test again" };
+            var d = new Dictionary<int, string>();
+            d.Add(1, "sample test");
+            d.Add(2, "yet again a test");
+            d.Add(3, "test once again");
 
-            return l;
+            return d;
         }
         
 

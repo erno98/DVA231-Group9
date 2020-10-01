@@ -12,6 +12,10 @@ $(document).ready(function() {
         $(this).slideUp(animation_length);
     })
 
+    $('#close-search-results').on('click', function(){
+        $('#search-results-wrapper').hide(400);
+    });
+
     $('#input-search').on('search', function(){
         $('#search-results-wrapper').show(400);
         var query = $(this).val();
@@ -28,16 +32,15 @@ $(document).ready(function() {
 
             },  
             failure: function (response) {  
-                 // TODO
+
             }  
-        });  
-        // display results
-        
+        });          
     })
 
 });
 
 function populate_search_results(response){
+    console.log(response.d)
     $('#search-results').empty();
     response.d.forEach(function(val){
         $('#search-results').append(

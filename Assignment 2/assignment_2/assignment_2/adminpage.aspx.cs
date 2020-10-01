@@ -59,10 +59,9 @@ namespace assignment_2
         //Method which is called after try to Login
         protected void Login_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
-
-            string query = "Select password FROM users WHERE username=" + "'" + username.Text + "'";
-
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;
+                                        AttachDbFilename=Users\ernest_pokropek\Desktop\Work\DVA\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf;
+                                        Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();

@@ -62,6 +62,7 @@
                         <!-- End of upper navbar -->
 
                         <div id="search-results-wrapper" style="display: none;">
+                            <i class="fas fa-times" id="close-search-results"></i>
                             <ul id="search-results">
                                 <p>No results found</p>
                             </ul>
