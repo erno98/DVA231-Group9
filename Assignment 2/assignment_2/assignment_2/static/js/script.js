@@ -77,18 +77,18 @@ function activate_queries(){
 }
 
 function populate_content(response){
-    var data = response.d;
-    var id = data['row_id'];
+    var data = JSON.parse(response.d);
+    var id = data.row_id;
 
     if (id === 1){
         // first cell, add information
-        $('.news-content').prepend(data['content']);
+        $('.news-content').prepend(data.content);
 
     } else {
         // second or third cell, change everything
-        $('#title' + id).text(data['title']);
-        $('#content' + id).text(data['content']);
-        $('#image' + id).attr('src') = data['img'];
+        $('#title' + id).text(data.title);
+        $('#content' + id).text(data.content);
+        $('#image' + id).attr('src', data.img);
     }
 
 }
