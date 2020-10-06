@@ -22,7 +22,7 @@ namespace assignment_2
         {
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
 
-            string query = "Select * FROM news";
+            string query = "Select * FROM news WHERE active = 1";
 
             SqlConnection conn = new SqlConnection(connectionString);
 
@@ -63,7 +63,7 @@ namespace assignment_2
         {
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
 
-            string search_query = "SELECT id,title FROM news WHERE title LIKE " + "'%" + query + "%'";
+            string search_query = "SELECT id,title FROM news WHERE title LIKE " + "'%" + query + "%'" + " LIMIT 5";
 
             SqlConnection conn = new SqlConnection(connectionString);
 

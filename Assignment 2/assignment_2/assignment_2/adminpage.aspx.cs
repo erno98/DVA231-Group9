@@ -61,7 +61,7 @@ namespace assignment_2
         {
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
 
-            string query = "Select password FROM users WHERE username=" + "'" + username.Text + "'";
+            string query = "SELECT password FROM users WHERE username=" + "'" + username.Text + "'";
 
             SqlConnection conn = new SqlConnection(connectionString);
 
@@ -129,22 +129,47 @@ namespace assignment_2
 
                 string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = ""C:\Users\lukas\OneDrive\Desktop\Assignment2\DVA231-Group9\Assignment 2\assignment_2\assignment_2\App_Data\DB.mdf""; Integrated Security = True";
 
-                string query1 = "UPDATE news SET title = " + "'" + content[0].title + "', " + " img = " + "'" + content[0].imgurl + "'," + " content = " + "'" + content[0].content + "'" + " WHERE id= 1";
-                string query2 = "UPDATE news SET title = " + "'" + content[1].title + "', " + " img = " + "'" + content[1].imgurl + "'," + " content = " + "'" + content[1].content + "'" + " WHERE id= 2";
-                string query3 = "UPDATE news SET title = " + "'" + content[2].title + "', " + " img = " + "'" + content[2].imgurl + "'," + " content = " + "'" + content[2].content + "'" + " WHERE id= 3";
+                int len = 0;
 
+                string count_query = "SELECT COUNT(*) FROM news";
+
+                
+
+                //string query3 = "UPDATE news SET title = " + "'" + content[2].title + "', " + " img = " + "'" + content[2].imgurl + "'," + " content = " + "'" + content[2].content + "'" + " WHERE id= 3";
 
                 SqlConnection conn = new SqlConnection(connectionString);
 
                 conn.Open();
 
-                SqlCommand command1 = new SqlCommand(query1, conn);
-                SqlCommand command2 = new SqlCommand(query2, conn);
-                SqlCommand command3 = new SqlCommand(query3, conn);
+                SqlCommand count_command = new SqlCommand(count_query, conn);
 
-                command1.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
-                command3.ExecuteNonQuery();
+                SqlDataReader reader = count_command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    len = (int)reader.GetValue(0);
+                }
+
+                reader.Close();
+
+                string update_query = "UPDATE news SET active = 0 WHERE active = 1";
+
+                string add_query1 = "INSERT INTO news (title, img, content, active, id) VALUES (" + "'" + content[0].title + "', " + " '" + content[0].imgurl + "'," + " '" + content[0].content + "'" + ", 1, " + (len+1).ToString() + ")";
+                string add_query2 = "INSERT INTO news (title, img, content, active, id) VALUES (" + "'" + content[1].title + "', " + " '" + content[1].imgurl + "'," + " '" + content[1].content + "'" + ", 1, " + (len + 2).ToString() + ")";
+                string add_query3 = "INSERT INTO news (title, img, content, active, id) VALUES (" + "'" + content[2].title + "', " + " '" + content[2].imgurl + "'," + " '" + content[2].content + "'" + ", 1, " + (len + 3).ToString() + ")";
+
+
+                SqlCommand update_command = new SqlCommand(update_query, conn);
+
+                SqlCommand add_command1 = new SqlCommand(add_query1, conn);
+                SqlCommand add_command2 = new SqlCommand(add_query2, conn);
+                SqlCommand add_command3 = new SqlCommand(add_query3, conn);
+
+                update_command.ExecuteNonQuery();
+
+                add_command1.ExecuteNonQuery();
+                add_command2.ExecuteNonQuery();
+                add_command3.ExecuteNonQuery();
 
                 conn.Close();
 
