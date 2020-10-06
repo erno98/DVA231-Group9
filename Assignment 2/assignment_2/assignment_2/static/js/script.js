@@ -88,7 +88,7 @@ function populate_content(response){
         // second or third cell, change everything
         $('#title' + id).text(data['title']);
         $('#content' + id).text(data['content']);
-        $('#image' + id).attr('src') = data['img'];
+        $('#image' + id).attr('src', data['img']);
     }
 
 }
