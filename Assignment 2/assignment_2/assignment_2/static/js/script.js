@@ -54,7 +54,9 @@ function highlight_query(query){
     // highlight the query 
     $('#search-results > li').each(function(){
         var words = $(this).text().split(' ');
-        words[words.indexOf(query)] = "<a class='highlight-search'>" + query + "</a>"
+        // get the index, case insensitive
+        var ind = $(this).text().toLowerCase().split(' ').indexOf(query.toLowerCase())
+        words[ind] = "<a class='highlight-search'>" + query + "</a>"
         $(this).html(words.join(' '));
     });
 }
