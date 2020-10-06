@@ -46,16 +46,16 @@ namespace assignment_2
 
             conn.Close();
 
-            title1.Text = "<p class='bottom-border'>" + pagecontent[0].title + "</p>";
-            content1.Text = "<li><a>" + pagecontent[0].content + "</a></li>";
+            title1.Text = "<p class='bottom-border title1'>" + pagecontent[0].title + "</p>";
+            content1.Text = "<li><a class='content1'>" + pagecontent[0].content + "</a></li>";
 
-            title2.Text = "<div class='img-title-box'>" + pagecontent[1].title + "</div>";
+            title2.Text = "<div class='img-title-box title2'>" + pagecontent[1].title + "</div>";
             image2.ImageUrl = pagecontent[1].imgurl;
-            content2.Text = "<p class='extended - description'>" + pagecontent[1].content + "</p>";
+            content2.Text = "<p class='extended - description content2'>" + pagecontent[1].content + "</p>";
 
-            title3.Text = "<h2>" + pagecontent[2].title + "</h2>";
+            title3.Text = "<h2 class='title3'>" + pagecontent[2].title + "</h2>";
             image3.ImageUrl = pagecontent[2].imgurl;
-            content3.Text = "<p>" + pagecontent[2].content + "</p>";
+            content3.Text = "<p class='content3'>" + pagecontent[2].content + "</p>";
 
         }
 
