@@ -19,9 +19,9 @@ $(document).ready(function() {
     $('#input-search').on('search', function(){
         $('#search-results-wrapper').show(animation_length);
         var query = $(this).val();
-        $.ajax({  
-            type: "POST",  
-            data: '{query: "' + query +'"}',
+        $.ajax({
+            type: "POST",
+            data: '{query :"' + query + '"}',
             url: "Coffee.aspx/GetData",  
             contentType: "application/json; charset=utf-8",  
             dataType: "json",  
@@ -34,7 +34,6 @@ $(document).ready(function() {
                 activate_queries();
             },  
             failure: function (response) {  
-
             }  
         });          
     })
@@ -43,7 +42,7 @@ $(document).ready(function() {
 
 function populate_search_results(response){
     $('#search-results').empty();
-    response.d.forEach(function(key, val){
+    $.each(response.d, function (key, val){
         $('#search-results').append(
             "<li id='db-" + key + "' class='db-id'>" + val + "</li>\n"
         );             
@@ -62,10 +61,10 @@ function highlight_query(query){
 
 
 function activate_queries(){
-    $('.db-id').on('click', function(){
+    $('.db-id').on('click', function () {
         $.ajax({  
             type: "POST",  
-            data: '{id: "' + $(this).attr('id').replace('db-', '') +'"}',
+            data: '{id :"' + $(this).attr('id').replace('db-', '') + '"}', 
             url: "Coffee.aspx/change_content",  
             contentType: "application/json; charset=utf-8",  
             dataType: "json"

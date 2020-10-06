@@ -85,6 +85,7 @@ namespace assignment_2
             }
    
             conn.Close();
+
             /*
 
             //if username and password are correct, change Session-Login variable and show the Upload-Panel and hide the Login-Panel
