@@ -56,7 +56,7 @@ function highlight_query(query){
         var words = $(this).text().split(' ');
         // get the index, case insensitive
         var ind = $(this).text().toLowerCase().split(' ').indexOf(query.toLowerCase())
-        words[ind] = "<a class='highlight-search'>" + query + "</a>"
+        words[ind] = "<a class='highlight-search'>" + words[ind] + "</a>"
         $(this).html(words.join(' '));
     });
 }
