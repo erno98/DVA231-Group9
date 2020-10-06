@@ -13,11 +13,11 @@ $(document).ready(function() {
     })
 
     $('#close-search-results').on('click', function(){
-        $('#search-results-wrapper').hide(400);
+        $('#search-results-wrapper').hide(animation_length);
     });
 
     $('#input-search').on('search', function(){
-        $('#search-results-wrapper').show(400);
+        $('#search-results-wrapper').show(animation_length);
         var query = $(this).val();
         $.ajax({  
             type: "POST",  
@@ -27,9 +27,11 @@ $(document).ready(function() {
             dataType: "json",  
             success: function (response) {  
                 // display results
-                populate_search_results(response)
+                populate_search_results(response);
                 highlight_query(query);
 
+                // make the results responsive
+                activate_queries();
             },  
             failure: function (response) {  
 
@@ -40,21 +42,33 @@ $(document).ready(function() {
 });
 
 function populate_search_results(response){
-    console.log(response.d)
     $('#search-results').empty();
-    response.d.forEach(function(val){
+    response.d.forEach(function(key, val){
         $('#search-results').append(
-            "<li>" + val + "</li>\n"
+            "<li id='db-" + key + "' class='db-id'>" + val + "</li>\n"
         );             
     });
 }
+
 
 function highlight_query(query){
     // highlight the query 
     $('#search-results > li').each(function(){
         var words = $(this).text().split(' ');
-        // TODO: add link
         words[words.indexOf(query)] = "<a class='highlight-search'>" + query + "</a>"
         $(this).html(words.join(' '));
+    });
+}
+
+
+function activate_queries(){
+    $('.db-id').on('click', function(){
+        $.ajax({  
+            type: "POST",  
+            data: '{id: "' + $(this).attr('id').replace('db-', '') +'"}',
+            url: "Coffee.aspx/change_content",  
+            contentType: "application/json; charset=utf-8",  
+            dataType: "json"
+        });     
     });
 }
