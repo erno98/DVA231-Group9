@@ -67,7 +67,28 @@ function activate_queries(){
             data: '{id :"' + $(this).attr('id').replace('db-', '') + '"}', 
             url: "Coffee.aspx/change_content",  
             contentType: "application/json; charset=utf-8",  
-            dataType: "json"
+            dataType: "json",
+            success: function (response) { 
+                // change the content based on json received 
+                populate_content(response);
+            }
         });     
     });
+}
+
+function populate_content(response){
+    var data = response.d;
+    var id = data['row_id'];
+
+    if (id === 1){
+        // first cell, add information
+        $('.news-content').prepend(data['content']);
+
+    } else {
+        // second or third cell, change everything
+        $('#title' + id).text(data['title']);
+        $('#content' + id).text(data['content']);
+        $('#image' + id).attr('src') = data['img'];
+    }
+
 }
